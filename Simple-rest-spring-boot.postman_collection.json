@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "4c11ed36-1033-4a2a-9385-b50a7b44aac7",
+		"name": "Simple-rest-spring-boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3745191"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Create employee",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true,
+							"accept-encoding": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"mohamed\",\n    \"lastName\": \"hassan\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.wsewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/employee/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create employee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"mohasdmed\",\n    \"lastName\": \"hassasdn\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.w4ewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/employee/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 May 2023 19:56:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New Employee created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update employee",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true,
+							"accept-encoding": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Mo\",\n    \"lastName\": \"Hassan\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.wsewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/employee/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update employee",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Mo\",\n    \"lastName\": \"Hassan\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.wsewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/employee/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 May 2023 20:39:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "List employees",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true,
+							"accept-encoding": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/employee/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List employees",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/employee/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 May 2023 20:39:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": null,\n        \"phoneNumber\": null,\n        \"email\": \"\",\n        \"salary\": 0,\n        \"department\": null,\n        \"lastname\": null\n    },\n    {\n        \"id\": 2,\n        \"firstName\": null,\n        \"phoneNumber\": null,\n        \"email\": \"sdf\",\n        \"salary\": 0,\n        \"department\": null,\n        \"lastname\": null\n    },\n    {\n        \"id\": 3,\n        \"firstName\": null,\n        \"phoneNumber\": null,\n        \"email\": \"sdf\",\n        \"salary\": 0,\n        \"department\": null,\n        \"lastname\": null\n    },\n    {\n        \"id\": 4,\n        \"firstName\": null,\n        \"phoneNumber\": null,\n        \"email\": \"sdf\",\n        \"salary\": 0,\n        \"department\": null,\n        \"lastname\": null\n    },\n    {\n        \"id\": 5,\n        \"firstName\": null,\n        \"phoneNumber\": null,\n        \"email\": \"sdf\",\n        \"salary\": 0,\n        \"department\": null,\n        \"lastname\": null\n    },\n    {\n        \"id\": 6,\n        \"firstName\": null,\n        \"phoneNumber\": null,\n        \"email\": \"sdf\",\n        \"salary\": 0,\n        \"department\": null,\n        \"lastname\": null\n    },\n    {\n        \"id\": 7,\n        \"firstName\": \"m\",\n        \"phoneNumber\": \"d\",\n        \"email\": \"df@we.wse\",\n        \"salary\": 23.2,\n        \"department\": \"MARKETING\",\n        \"lastname\": \"dfىى\"\n    },\n    {\n        \"id\": 8,\n        \"firstName\": \"mohamed\",\n        \"phoneNumber\": \"2010686823\",\n        \"email\": \"df@we.wsewe\",\n        \"salary\": 23.2,\n        \"department\": \"MARKETING\",\n        \"lastname\": \"hassan\"\n    },\n    {\n        \"id\": 9,\n        \"firstName\": \"mohamed\",\n        \"phoneNumber\": \"2010686823\",\n        \"email\": \"df@we.wsewe\",\n        \"salary\": 23.2,\n        \"department\": \"MARKETING\",\n        \"lastname\": \"hassan\"\n    },\n    {\n        \"id\": 10,\n        \"firstName\": \"mohamed\",\n        \"phoneNumber\": \"sd\",\n        \"email\": \"df@we.wsewe\",\n        \"salary\": 23.2,\n        \"department\": \"MARKETING\",\n        \"lastname\": \"hassan\"\n    },\n    {\n        \"id\": 11,\n        \"firstName\": \"Mo\",\n        \"phoneNumber\": \"2010686823\",\n        \"email\": \"df@we.wsewe\",\n        \"salary\": 23.2,\n        \"department\": \"MARKETING\",\n        \"lastname\": \"hassan\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get employee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true,
+							"accept-encoding": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"mohamed\",\n    \"lastName\": \"hassan\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.wsewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/employee/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get employee",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"mohamed\",\n    \"lastName\": \"hassan\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.wsewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/employee/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 May 2023 20:08:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 12,\n    \"firstName\": \"mohasdmed\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.w4ewe\",\n    \"salary\": 23.2,\n    \"department\": \"MARKETING\",\n    \"lastname\": \"hassasdn\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete employee",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true,
+							"accept-encoding": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"mohamed\",\n    \"lastName\": \"hassan\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.wsewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/employee/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete employee",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"mohamed\",\n    \"lastName\": \"hassan\",\n    \"phoneNumber\": \"2010686823\",\n    \"email\": \"df@we.wsewe\",\n    \"salary\": 23.20,\n    \"department\": \"MARKETING\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/employee/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 May 2023 20:22:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "hello test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
