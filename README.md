@@ -10,8 +10,9 @@ There are a number of third-party dependencies used in the project,
 browse the Maven pom.xml file for details of libraries and versions used.
 
 # Building
-- You can build and run the app through using the IDE.
-- Use maven by running these commands:
+- Run `cp application-template.properties application.properties`
+- Then you can build and run the app through using the IDE.
+- Or use maven by running these commands:
   - Build the project using `mvn clean install`
   - Run using `mvn spring-boot:run`
   - The web application is accessible via `localhost:8080`
